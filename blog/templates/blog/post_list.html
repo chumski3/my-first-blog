@@ -7,14 +7,12 @@
         <h1><a href="/">Chumski's Blog</a></h1>
       </div>
 
+    {% for post in posts %}
       <div>
-        <p>published: 7/20/19, 7:47am</p>
-        <h2><a href="">My first post</a><h2>
-        <p><em>Hola, como estas?</em></p>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="www.google.com">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
       </div>
-        <p>published: 7/20/19, 7:53am</p>
-        <h2><a href="">My second post</a><h2>
-        <p>Bien, y tu?</p>
-      <div>
-    </body>
+    {% endfor %}
+
 </html>
